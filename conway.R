@@ -1,5 +1,6 @@
 library(imager)
 
+
 conway <- function(board_size = 100 , initial = 4000, generations_size = 200){
 
   generations <- list()
@@ -44,6 +45,7 @@ conway <- function(board_size = 100 , initial = 4000, generations_size = 200){
       return(generations)
 }
 
+#board_size as 1000x1000 pixels  
 imagem <- conway(generations_size = 1000, board_size = 200,initial = 15000 ) %>% as.cimg()
 imagem  %>% play(loop = T, delay = 30)
 
